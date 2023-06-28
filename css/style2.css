@@ -1,0 +1,264 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Comfortaa", "Noto Sans TC";
+} 
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+    padding-left: 20rem;
+  }
+}
+
+
+/* Common */
+.lh-2 {
+  line-height: 2rem;
+}
+
+
+.text-blue {
+  color: #265597;
+}
+/* Nav bar: 調整縮小版面後的margin*/
+
+@media (min-width: 992px) {
+  #side-nav {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  #navbarNav .navbar-nav {
+    display: flex;
+    flex-direction: column;
+  }
+  #navbarNav .navbar-nav .nav-item .nav-link {
+    display: block;
+    margin: 1.5rem 0rem;
+  }
+}
+@media (max-width: 991px) {
+  #navbarNav .navbar-nav .nav-item .nav-link {
+    display: block;
+    margin: 0.5rem 0rem;
+  }
+}
+
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: #265597 !important;
+  font-weight: bolder;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #265597 !important;
+}
+
+/* Background */
+.bg-lightgray {
+  background-color: #f4f4f3;
+}
+
+.bg-computer {
+  background-image: url("../images/bg/computer.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+@media (min-width: 576px) {
+  .bg-computer {
+    background-image: url("../images/bg/computer.jpg");
+    background-size: cover;
+    position: relative;
+  }
+}
+
+.bg-opacity {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.801);
+  padding: 2rem;
+}
+@media (max-width: 990px) {
+  section::before {
+    content:"";
+    display:block;
+    height:105px;
+  }
+}
+.about>ul{
+  list-style: none;
+  
+}
+.about>ul>li{
+  padding: 10px;
+  font-size: 25px;
+  color: #265597;
+}
+.section-content {
+  min-height: 100vh;
+  padding: 2rem;
+  border-bottom: 0.5px solid rgba(196, 195, 195, 0.596);
+}
+
+/* Social icon */
+.social-icon {
+  list-style: none;
+  display: inline-block;
+}
+.social-icon a {
+  display: inline-block;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: #9aa3b0;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 3.5rem;
+  margin-right: 1rem;
+  border: none;
+}
+.social-icon a:hover {
+  background-color: #265597;
+  transition: 0.5s;
+}
+
+/* Timeline */
+ul.timeline {
+  list-style-type: none;
+  position: relative;
+}
+ul.timeline:before {
+  content: " ";
+  background: #d4d9df;
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+}
+ul.timeline > li {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+ul.timeline > li:before {
+  content: " ";
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #265597;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+}
+
+/* Skill icon */
+.skill-icon {
+  list-style: none;
+  display: inline-block;
+}
+
+.skill-icon a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  font-size: 5rem;
+  line-height: 3.5rem;
+  margin-right: 1rem;
+  border: none;
+}
+.skill-icon a:hover {
+  color: #265597;
+}
+
+/* Card*/
+.card:hover {
+  background-color: #265597;
+  color: white ;
+  transition: 0.5s;
+}
+
+/*portfolio_skill*/
+.portfolio-skill{
+  width:120px;
+  background-color: rgb(78, 78, 77);
+  color: white;
+  text-align: center;
+  font-size:10px;
+  border-radius: 10px;
+  padding: 2px 10px;
+  margin: 3px 3px 3px 0px ;
+
+}
+
+/*portfolio_img*/
+
+@media (max-width: 575px) {
+  .portfolio_img{
+    width: 100%;
+  }
+}
+@media (min-width: 576px) {
+  .portfolio_img{
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .portfolio_img{
+    width: auto;
+  }
+}
+@media (min-width: 992px) {
+  .portfolio_img{
+    width: auto;
+  }
+}
+
+/*portfolio font awesome link*/
+#portfolio ul li div h5 a{
+  color:#4b4d50
+}
+#portfolio ul li div h5 a:hover{
+  color:#265597
+}
+
+/*進度條*/
+@media (min-width: 992px){
+  .bar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 10px;
+    background-color: #f1f1f1;
+  }
+  /* The progress container (grey background) */
+  .bar-container {
+    width: 10px;
+    height: 100vh;
+    background: #f4f4f3;
+  }
+
+  /* The progress bar (scroll indicator) */
+  .bar-actually {
+    height: 0;
+    background: #265597;
+    width: 10px;
+  }
+}
+
+.object-fit {
+  object-fit: cover;
+}
